@@ -1,0 +1,14 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  {% assign is_first_post = true %}
+  {% for post in site.posts %}
+    {% if post.hidden != true %}
+      {% include showpost.html %}
+    {% endif %}
+  {% endfor %}
+  <!-- <hr> -->
+</div>

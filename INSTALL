@@ -1,0 +1,7 @@
+sudo apt-get install ruby ruby-dev
+sudo gem install bundler
+sudo gem install jekyll -v 2.5.3
+
+mkdir ~/jekyll
+copy runjekyll.sh to /usr/bin and add to startup
+log will be at ~/jekyll

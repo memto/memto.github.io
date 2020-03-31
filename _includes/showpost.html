@@ -1,0 +1,29 @@
+<div class="post clearfix">
+    <div class="post-title clearfix">
+        <img src="{{base.url}}/downloads/draw-hidden/calendar-icons.png"> 
+        <span>{{ post.date | date_to_string }}</span> &raquo; &nbsp; 
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </div>
+
+    {% if post.series.size > 0 or post.tags.size > 0 %}
+        <div class="post-meta clearfix">
+            {% if post.series.size > 0 %}
+              <span class="clearfix">              
+                <img src="{{base.url}}/downloads/draw-hidden/series.png">
+                {% for series in post.series %}
+                  <a href="{{ base.url }}/#">{{ series }}</a>
+                {% endfor %}
+              </span>
+            {% endif %}
+            
+            {% if post.tags.size > 0 %}
+              <span class="clearfix">              
+                <img src="{{base.url}}/downloads/draw-hidden/tags1.png">
+                {% for tag in post.tags %}
+                  <a href="{{ base.url }}/#">{{ tag }}</a>
+                {% endfor %}
+              </span>
+            {% endif %}
+        </div>        
+    {% endif %}
+</div>

@@ -1,0 +1,57 @@
+---
+layout: default
+published: true
+---
+
+{% include advertising.html %}
+<br>
+<article class="single-post">
+  <h2 class="single-post-title">{{ page.title | capitalize }}</h2>
+
+  <div class="single-post-meta clearfix">
+    <span>
+      <img src="{{base.url}}/downloads/draw-hidden/calendar-icons.png">
+      <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+    </span>
+
+    {% if page.series.size > 0 %}
+        <span class="clearfix">
+        <img src="{{base.url}}/downloads/draw-hidden/series.png">
+          {% for series in page.series %}
+            <a href="{{ base.url }}/#">{{ series }}</a>
+          {% endfor %}
+        </span>
+    {% endif %}
+
+    {% if page.tags.size > 0 %}
+        <span class="clearfix">
+        <img src="{{base.url}}/downloads/draw-hidden/tags1.png">
+          {% for tag in page.tags %}
+            <a href="{{ base.url }}/tags/#{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </span>
+    {% endif %}
+  </div>
+
+  {{ content }}
+</article>
+<br>
+{% include advertising.html %}
+
+{% include comments.html %}
+
+{% if site.related_posts != empty %}
+<aside class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+            <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>
+{% endif %}

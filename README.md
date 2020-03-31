@@ -1,2 +1,1 @@
-# memto.github.io
-note on the web
+A personal blog that notes what I've read/studied.
