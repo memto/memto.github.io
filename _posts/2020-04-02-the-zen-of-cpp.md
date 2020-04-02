@@ -3,7 +3,7 @@ layout: post
 ads: true
 comments: true
 published: true
-title: The Zen of Cpp
+title: The Zen of Learning Cpp
 categories:
   - program
   - misc
@@ -11,7 +11,7 @@ tags:
   - C++
   - C++ Mindset
 ---
-### Note: This is just collections of quotes/opinions that I consider would be good mindset for someone to move from another languages (ex: C) to Cpp or just start with Cpp
+#### Note: This is just collections of quotes/opinions that I consider would be good mindset for someone to move from another languages (ex: C) to Cpp or just start with Cpp
 
 - If you're arguing, you're loosing - Mike Thomas
 
