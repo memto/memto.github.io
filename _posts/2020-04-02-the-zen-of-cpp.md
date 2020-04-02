@@ -2,7 +2,7 @@
 layout: post
 ads: true
 comments: true
-published: false
+published: true
 title: The Zen of Cpp
 categories:
   - program
@@ -27,5 +27,3 @@ tags:
 	Ref: A Tour of C++ In-Depth 2nd Page 19
     
 - TBD
-
-
