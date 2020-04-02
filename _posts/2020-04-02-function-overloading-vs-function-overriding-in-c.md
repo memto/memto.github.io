@@ -16,7 +16,7 @@ tags:
 
 #### Example Cpp code
 
-```Cpp
+```cpp
 // CPP program to illustrate 
 // Function Overriding 
 #include<iostream> 
@@ -80,7 +80,7 @@ int main()
 .text:0000000000000A74                 mov     [rbp+this], rdi ; rdi = the *this* pointer
 .text:0000000000000A78                 lea     rsi, aThisIsShowMeth ; "\nThis is Show() method of BaseClass"
 .text:0000000000000A7F                 lea     rdi, _ZSt4cout@@GLIBCXX_3_4
-.text:0000000000000A86                 call    __ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc ; std::operator<<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,char const*)
+.text:0000000000000A86                 call    __ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc 
 .text:0000000000000A8B                 nop
 .text:0000000000000A8C                 leave
 .text:0000000000000A8D                 retn
@@ -105,7 +105,7 @@ int main()
 .text:0000000000000A96                 mov     [rbp+this], rdi
 .text:0000000000000A9A                 lea     rsi, aThisIsDisplayM ; "\nThis is Display() method of DerivedCl"...
 .text:0000000000000AA1                 lea     rdi, _ZSt4cout@@GLIBCXX_3_4
-.text:0000000000000AA8                 call    __ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc ; std::operator<<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,char const*)
+.text:0000000000000AA8                 call    __ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc 
 .text:0000000000000AAD                 nop
 .text:0000000000000AAE                 leave
 .text:0000000000000AAF                 retn
