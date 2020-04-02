@@ -13,6 +13,7 @@ tags:
 #### Ref
 - https://www.geeksforgeeks.org/function-overloading-vs-function-overriding-in-cpp/
 
+
 #### Example Cpp code
 
 ```Cpp
@@ -24,39 +25,40 @@ using namespace std;
 class BaseClass 
 { 
 public: 
-	virtual void Display() 
-	{ 
-		cout << "\nThis is Display() method"
-				" of BaseClass"; 
-	} 
-	void Show() 
-	{ 
-		cout << "\nThis is Show() method "
-			"of BaseClass"; 
-	} 
+  virtual void Display() 
+  { 
+    cout << "\nThis is Display() method"
+        " of BaseClass"; 
+  } 
+  void Show() 
+  { 
+    cout << "\nThis is Show() method "
+      "of BaseClass"; 
+  } 
 }; 
 
 class DerivedClass : public BaseClass 
 { 
 public: 
-	// Overriding method - new working of 
-	// base class's display method 
-	void Display() 
-	{ 
-		cout << "\nThis is Display() method"
-			" of DerivedClass"; 
-	} 
+  // Overriding method - new working of 
+  // base class's display method 
+  void Display() 
+  { 
+    cout << "\nThis is Display() method"
+      " of DerivedClass"; 
+  } 
 }; 
 
 // Driver code 
 int main() 
 { 
-	DerivedClass dr; 
-	BaseClass &bs = dr; 
-	bs.Display(); 
-	dr.Show(); 
+  DerivedClass dr; 
+  BaseClass &bs = dr; 
+  bs.Display(); 
+  dr.Show(); 
 } 
 ```
+
 
 #### Class methods are just like others functions, that is they are just some code located somewhere in `.text` (.code) section. Except that a class method will receive as its first argument the famous `this` pointer (passed via `rdi` register in this case). Also, you can see name mangling in actions here (ex: `_ZN9BaseClass4ShowEv, _ZN12DerivedClass7DisplayEv`)
 
@@ -112,6 +114,7 @@ int main()
 .text:0000000000000AAF
 ```
 
+
 #### `Vtable` of a class is just array of function pointers to its virtual functions which located somewhere in read-only data section (`.data.rel.ro`)
 
 ```asm
@@ -122,6 +125,7 @@ int main()
 .data.rel.ro:0000000000201D68                                         ; DATA XREF: main+17↑o
 .data.rel.ro:0000000000201D68                                         ; DerivedClass::Display(void)
 ```
+
 
 #### This is how compiler setup and call correct function in case of `polymorphism`
 
