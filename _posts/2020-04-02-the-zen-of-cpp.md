@@ -26,4 +26,8 @@ tags:
 
 	Ref: A Tour of C++ In-Depth 2nd Page 19
     
+- You'll need a right mindset - Steve Fleming
+
+	Ref: https://www.automatedtradingsoftware.com/blog/mql-programming/do-you-have-the-right-mindset-to-be-a-programmer/
+    
 - TBD
