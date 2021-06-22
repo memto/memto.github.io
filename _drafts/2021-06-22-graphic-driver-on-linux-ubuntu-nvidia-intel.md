@@ -71,6 +71,7 @@ sudo apt clean; sudo apt update; sudo apt purge cuda; sudo apt purge nvidia-*; s
 ```
 
 ### Monitoring
+
 ```bash
 # https://www.andrey-melentyev.com/monitoring-gpus.html
 $ nvidia-smi 
