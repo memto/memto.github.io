@@ -4,6 +4,13 @@ ads: true
 comments: true
 published: false
 title: Graphic driver on Linux/Ubuntu (Nvidia/Intel)
+categories:
+  - linux
+  - tooltips
+tags:
+  - GPU
+  - Linux
+  - Nvidia GTX 1050Ti
 ---
 ### Ref:
 - https://wiki.debian.org/HardwareVideoAcceleration
