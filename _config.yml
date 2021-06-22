@@ -106,13 +106,13 @@ db:
       short_name: memto
 
   ads:
-    # adsense_auto: true
-    # provider: adsense
+    adsense_auto: true
+    provider: adsense
 
   analytics:
-    # provider: google
-    # google:
-    #   tracking_id: 'UA-87741523-1'
+    provider: google
+    google:
+       tracking_id: 'UA-87741523-1'
 
   gg-site-verify: Vlf0cQilWaqSO8mLygr_viwROUNHkMIRH-h1Kg_o97U
 
