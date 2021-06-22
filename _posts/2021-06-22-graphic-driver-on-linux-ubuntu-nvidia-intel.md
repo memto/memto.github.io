@@ -2,7 +2,7 @@
 layout: post
 ads: true
 comments: true
-published: false
+published: true
 title: Graphic driver on Linux/Ubuntu (Nvidia/Intel)
 categories:
   - linux
