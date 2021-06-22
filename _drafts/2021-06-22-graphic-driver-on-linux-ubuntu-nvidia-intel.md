@@ -26,6 +26,7 @@ sudo lshw -c display
 
 ### Install driver
 - Option 1: when install OS, or from Software & Updates
+
 ![](https://i.imgur.com/MedtrFk.png)
 
 ![](https://i.imgur.com/Kb9LXmI.png)
