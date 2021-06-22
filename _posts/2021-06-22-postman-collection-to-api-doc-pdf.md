@@ -2,7 +2,7 @@
 layout: post
 ads: true
 comments: true
-published: false
+published: true
 title: Postman collection to API doc pdf
 categories:
   - linux
