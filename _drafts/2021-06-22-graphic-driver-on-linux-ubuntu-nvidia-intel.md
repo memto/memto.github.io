@@ -24,4 +24,4 @@ sudo lshw -c display
 
 ### Install driver
 
-![]({{site.baseurl}}/https://i.imgur.com/Kb9LXmI.png)
+![](https://i.imgur.com/Kb9LXmI.png)
