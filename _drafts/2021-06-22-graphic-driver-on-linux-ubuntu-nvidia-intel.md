@@ -52,6 +52,6 @@ wget https://developer.download.nvidia.com/compute/cuda/11.3.0/local_installers/
 sudo dpkg -i cuda-repo-ubuntu2004-11-3-local_11.3.0-465.19.01-1_amd64.deb
 sudo apt-key add /var/cuda-repo-ubuntu2004-11-3-local/7fa2af80.pub
 
-# install (this will also install nvidia driver, so need to remove nvidia*)
+# Install CUDA (this will also install nvidia driver, so need to remove nvidia*)
 sudo apt clean; sudo apt update; sudo apt purge cuda; sudo apt purge nvidia-*; sudo apt autoremove; sudo apt install cuda
 ```
