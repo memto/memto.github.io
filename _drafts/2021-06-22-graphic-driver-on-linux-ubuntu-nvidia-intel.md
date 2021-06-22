@@ -20,7 +20,9 @@ sudo lshw -c video
 sudo lshw -c display
 ```
 
-=> Nvidia GeForce GTX 1050ti 4GB - NVIDIA Corporation GP107 [GeForce GTX 1050 Ti] - Pascal
+- => Nvidia GeForce GTX 1050ti 4GB - NVIDIA Corporation GP107 [GeForce GTX 1050 Ti] - Pascal
+- => Info:
+	- 
 
 ### Install driver
 - Option 1: when install OS, or from Software & Updates
@@ -29,7 +31,6 @@ sudo lshw -c display
 ![](https://i.imgur.com/Kb9LXmI.png)
 
 - Option 2: Install CUDA
-
 ```bash
 https://en.wikipedia.org/wiki/CUDA#GPUs_supported
 
