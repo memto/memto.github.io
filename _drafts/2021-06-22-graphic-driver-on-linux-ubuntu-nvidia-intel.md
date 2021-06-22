@@ -33,7 +33,8 @@ sudo lshw -c display
 - Option 2: Install CUDA
 
 ```bash
-https://en.wikipedia.org/wiki/CUDA#GPUs_supported
+# https://forums.developer.nvidia.com/t/cuda-for-geforce-gtx-1050-ti/57928/3
+# https://en.wikipedia.org/wiki/CUDA#GPUs_supported
 
 sudo apt-get install linux-headers-$(uname -r)
 
