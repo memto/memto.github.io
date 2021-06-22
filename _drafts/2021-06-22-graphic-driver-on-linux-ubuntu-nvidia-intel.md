@@ -22,7 +22,7 @@ sudo lshw -c display
 
 - => Nvidia GeForce GTX 1050ti 4GB - NVIDIA Corporation GP107 [GeForce GTX 1050 Ti] - Pascal
 - => Info:
-	- 
+	- Spec: https://www.nvidia.com/en-gb/geforce/graphics-cards/geforce-gtx-1050-ti/specifications/
 
 ### Install driver
 - Option 1: when install OS, or from Software & Updates
