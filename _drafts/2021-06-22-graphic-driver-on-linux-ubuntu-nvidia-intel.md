@@ -31,6 +31,7 @@ sudo lshw -c display
 ![](https://i.imgur.com/Kb9LXmI.png)
 
 - Option 2: Install CUDA
+
 ```bash
 https://en.wikipedia.org/wiki/CUDA#GPUs_supported
 
