@@ -106,7 +106,7 @@ db:
       short_name: memto
 
   ads:
-    adsense_auto: true
+    adsense_site: true
     provider: adsense
 
   analytics:
