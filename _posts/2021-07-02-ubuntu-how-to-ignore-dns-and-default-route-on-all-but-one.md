@@ -2,7 +2,7 @@
 layout: post
 ads: true
 comments: true
-published: false
+published: true
 title: Ubuntu - how to ignore DNS and default route on all but one?
 categories:
   - linux
