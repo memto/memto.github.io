@@ -6,8 +6,8 @@ published: true
 title: Cassandra DB on Ubuntu
 ---
 #### Ref
-https://linuxize.com/post/how-to-install-apache-cassandra-on-ubuntu-18-04/
-https://www.guru99.com/cassandra-security.html
+- https://linuxize.com/post/how-to-install-apache-cassandra-on-ubuntu-18-04/
+- https://www.guru99.com/cassandra-security.html
 
 #### Notes
 - On my system, I need java 11/above for some app/service. However, it seems Cassandra only run stable with java 8. These are java version on my system.
