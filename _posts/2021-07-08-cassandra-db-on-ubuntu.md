@@ -58,3 +58,84 @@ Improperly specified VM option 'ThreadPriorityPolicy=42'
 Error: Could not create the Java Virtual Machine.
 Error: A fatal exception has occurred. Program will exit.
 ```
+
+- Fix cassandra
+```
+# set JAVA_HOME in config file 
+$ sudo vim /etc/default/cassandra
+  # EXTRA_CLASSPATH provides the means to extend Cassandra's classpath with
+  # additional libraries.  It is formatted as a colon-delimited list of
+  # class directories and/or jar files.  For example, to enable the
+  # JMX-to-web bridge install libmx4j-java and uncomment the following.
+  #EXTRA_CLASSPATH="/usr/share/java/mx4j-tools.jar"
+
+  JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
+# reload service
+sudo systemctl stop cassandra.service
+sudo systemctl start cassandra.service
+```
+
+- Fix nodetool
+
+```bash
+# Run with JAVA_HOME
+$ JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 nodetool status
+
+# edit nodetool and hard-code JAVA
+$ sudo vim /usr/bin/nodetool
+  # Use JAVA_HOME if set, otherwise look for java in PATH
+  if [ -x "$JAVA_HOME/bin/java" ]; then
+      JAVA="$JAVA_HOME/bin/java"
+  else
+      JAVA="`which java`"
+  fi
+
+  JAVA=/usr/lib/jvm/java-8-openjdk-amd64/bin/java
+
+  if [ "x$JAVA" = "x" ]; then
+      echo "Java executable not found (hint: set JAVA_HOME)" >&2
+      exit 1
+  fi
+
+  if [ -z "$CASSANDRA_CONF" -o -z "$CLASSPATH" ]; then
+      echo "You must set the CASSANDRA_CONF and CLASSPATH vars" >&2
+      exit 1
+  fi
+```
+
+#### Configure Authentication and Authorization
+
+```bash
+$ sudo vim /etc/cassandra/cassandra.yaml
+
+  # Authentication backend, implementing IAuthenticator; used to identify users
+  # Out of the box, Cassandra provides org.apache.cassandra.auth.{AllowAllAuthenticator,
+  # PasswordAuthenticator}.
+  #
+  # - AllowAllAuthenticator performs no checks - set it to disable authentication.
+  # - PasswordAuthenticator relies on username/password pairs to authenticate
+  #   users. It keeps usernames and hashed passwords in system_auth.roles table.
+  #   Please increase system_auth keyspace replication factor if you use this authenticator.
+  #   If using PasswordAuthenticator, CassandraRoleManager must also be used (see below)
+  #authenticator: AllowAllAuthenticator
+  authenticator: PasswordAuthenticator
+  #authenticator: com.datastax.bdp.cassandra.auth.PasswordAuthenticator
+
+  # Authorization backend, implementing IAuthorizer; used to limit access/provide permissions
+  # Out of the box, Cassandra provides org.apache.cassandra.auth.{AllowAllAuthorizer,
+  # CassandraAuthorizer}.
+  #
+  # - AllowAllAuthorizer allows any action to any user - set it to disable authorization.
+  # - CassandraAuthorizer stores permissions in system_auth.role_permissions table. Please
+  #   increase system_auth keyspace replication factor if you use this authorizer.
+  #authorizer: AllowAllAuthorizer
+  authorizer: CassandraAuthorizer
+  #authorizer: com.datastax.bdp.cassandra.auth.CassandraAuthorizor 
+
+$ cqlsh -u cassandra -p cassandra
+  [cqlsh 5.0.1 | Cassandra 3.11.10 | CQL spec 3.4.4 | Native protocol v4]
+  Use HELP for help.
+  cassandra@cqlsh> 
+```
+
