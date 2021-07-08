@@ -2,7 +2,7 @@
 layout: post
 ads: true
 comments: true
-published: false
+published: true
 title: Cassandra DB on Ubuntu
 ---
 #### Ref
@@ -138,4 +138,3 @@ $ cqlsh -u cassandra -p cassandra
   Use HELP for help.
   cassandra@cqlsh> 
 ```
-
