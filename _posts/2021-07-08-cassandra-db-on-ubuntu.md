@@ -134,8 +134,13 @@ $ sudo vim /etc/cassandra/cassandra.yaml
   authorizer: CassandraAuthorizer
   #authorizer: com.datastax.bdp.cassandra.auth.CassandraAuthorizor 
 
+# reload service
+sudo systemctl stop cassandra.service
+sudo systemctl start cassandra.service
+
+# login and change password
 $ cqlsh -u cassandra -p cassandra
   [cqlsh 5.0.1 | Cassandra 3.11.10 | CQL spec 3.4.4 | Native protocol v4]
   Use HELP for help.
-  cassandra@cqlsh> 
+  cassandra@cqlsh> alter user cassandra with password 'newpassword';
 ```
