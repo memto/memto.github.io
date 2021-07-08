@@ -60,6 +60,7 @@ Error: A fatal exception has occurred. Program will exit.
 ```
 
 - Fix cassandra
+
 ```
 # set JAVA_HOME in config file 
 $ sudo vim /etc/default/cassandra
