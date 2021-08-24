@@ -1,0 +1,132 @@
+markdown: kramdown
+
+plugins: [jekyll-gist, jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+title:               Memto
+tagline:             Notes on the web
+url:                 http://memto.github.io
+paginate:            5
+baseurl:             ""
+
+excerpt_separator:   <!--more-->
+
+prose:
+  siteurl: 'http://memto.github.io'
+  media: 'media'
+  ignore:
+    - /downloads
+    - /public
+    - /tags
+    - /media
+    - /.sass-cache
+    - /.gitignore
+    - /404.html
+    - /LICENSE*
+    - /atom.xml
+  metadata:
+      _posts:
+        - name: "title"
+          field:
+            element: "text"
+            label: "Title"
+            value: ""
+        - name: "layout"
+          field:
+            element: "hidden"
+            value: "post"
+        - name: "categories"
+          field:
+            element: "multiselect"
+            label: "Add Categories"
+            placeholder: "Choose Categories"
+            options:
+              - name: "linux"
+                value: "linux"
+              - name: "program"
+                value: "program"
+              - name: "tooltips"
+                value: "tooltips"
+              - name: "misc"
+                value: "misc"
+              - name: "telecom"
+                value: "telecom"
+        - name: "tags"
+          field:
+            element: "multiselect"
+            label: "Add Tags"
+            alterable: "true"
+            options:
+        - name: "series"
+          field:
+            element: "multiselect"
+            label: "Add Series"
+            alterable: "true"
+            options:
+        - name: "ads"
+          field:
+            element: "checkbox"
+            label: "Advertising"
+            value: "true"
+        - name: "comments"
+          field:
+            element: "checkbox"
+            label: "Comments"
+            value: "true"
+
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              dvn0zzz
+  email:             dvn0zzz@gmail.com
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/memto/memto.github.io
+
+db:
+  comments:
+    provider: disqus
+    disqus:
+      short_name: memto
+
+  ads:
+    # provider: adsense
+    # adsense:
+    #   data_ad_client: 'ca-pub-XXXX'
+    #   page_level_ads: true
+    #   display_ads: true
+
+  analytics:
+    # provider: google
+    # google:
+    #   tracking_id: 'UA-XXXX'
+
+  gg-site-verify: Vlf0cQilWaqSO8mLygr_viwROUNHkMIRH-h1Kg_o97U
+
+pages_list:
+  About: '/about'
+  Newterm: '/newterm'
+  Archive: '/archive'
+  Feed: '/atom.xml'
+
+categories_list:
+  linux: linux-cat
+  program: program-cat
+  telecom: telecom-cat
+  tooltips: tooltips-cat
+  misc: misc-cat

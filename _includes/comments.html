@@ -1,0 +1,12 @@
+{% if site.db.comments.provider and page.comments != false %}
+
+{% case site.db.comments.provider %}
+{% when "disqus" %}
+  {% include comments-providers/disqus.html %}
+{% when "facebook" %}
+  {% include comments-providers/facebook.html %}
+{% when "custom" %}
+  {% include custom/comments.html %}
+{% endcase %}
+
+{% endif %}

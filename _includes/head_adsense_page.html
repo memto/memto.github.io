@@ -1,0 +1,5 @@
+<!-- adsense page level ads -->
+{% if site.db.ads.provider == "adsense" and site.db.ads.provider.adsense.page_level_ads == true %}
+	<script data-ad-client="{{site.db.ads.data_ad_client}}" 
+	async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{% endif %}

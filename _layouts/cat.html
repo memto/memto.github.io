@@ -1,0 +1,21 @@
+---
+layout: default
+published: true
+---
+
+<div class="posts">
+    {% assign cat_name = page.title %}
+    {% assign sorted_posts = site.posts %}
+
+    {% for post in sorted_posts %}
+  		{% assign categories_lower = post.categories | downcase %}
+        {% if categories_lower contains cat_name %}
+            {% assign num_of_post = post.title %}
+            {% include showpost.html %}
+        {% endif %}
+    {% endfor %}
+
+    {% if num_of_post == null %}
+        Ooops!! There's no post in this categorie now. <a href="{{ site.baseurl }}/">Head back home</a> to visit my blog again. Thanks!!</p>
+    {% endif %}
+</div>

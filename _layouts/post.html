@@ -1,0 +1,49 @@
+---
+layout: default
+published: true
+---
+
+{% include advertising.html %}
+
+<br>
+<article class="single-post">
+  <h2 class="single-post-title">{{ page.title | capitalize }}</h2>
+
+  <div class="single-post-meta clearfix">
+    <span>
+      <i class="far fa-calendar-alt"></i>
+      <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+    </span>
+
+    {% if page.tags.size > 0 %}
+        <span class="clearfix">
+        <i class="fas fa-tags"></i>
+          {% for tag in page.tags %}
+            <a href="{{ base.url }}/tags/#{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </span>
+    {% endif %}
+  </div>
+
+  {{ content }}
+</article>
+
+<br>
+{% include advertising.html %}
+{% include comments.html %}
+
+{% if site.related_posts != empty %}
+<aside class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+            <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>
+{% endif %}

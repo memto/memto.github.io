@@ -1,0 +1,20 @@
+<header class="header clearfix ">
+  <span id="logo">
+    <h3><a href="{{ site.baseurl }}/" title="Home">{{ site.title | upcase }}</a></h3>
+    <span>{{ site.tagline }}</span>
+  </span>
+  <nav id="top-nav">
+    <a id="icon" href="javascript:void(0);" onclick="toggleNav()">☰</a>
+    <span id="site-meta">
+      {% for page in site.pages_list %}
+        <small><a href="{{ page[1]  }}">{{ page[0] | upcase }}</a></small>
+      {% endfor %}
+    </span>
+    <span id="category">
+      {% assign categories = site.categories_list %}
+      {% for cat in categories %}
+          <small><a href="{{ site.baseurl }}/{{ cat[1] }}">&raquo;{{ cat[0] | capitalize }}</a></small>
+      {% endfor %}
+    </span>
+  </nav>
+</header>

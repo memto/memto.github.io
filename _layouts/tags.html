@@ -1,0 +1,48 @@
+---
+layout: default
+published: true
+---
+
+{% assign icon = 'tag' %}
+{% assign title = 'tags list' %}
+<div class="clearfix">
+	<div class="archive-sidebar" >
+		<h2 class="{{ icon }}-icon"><span class='archive-folder'>{{ title | capitalize }}</span></h2>
+		<ul class="archive-list">
+			<div class="archiveslist archive-float clearfix">
+				{% for tag in site.tags  %}
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="#{{ tag[0] }}">{{ tag[0] | capitalize }}</a>
+					<span class="archive-list-count">({{ tag[1] | size }})</span>
+				</li>
+				{% endfor %}
+			</div>
+		</ul>
+	</div>
+
+	<div class="archive-content clearfix">
+		{% for post in site.posts %}
+			{% assign item = post %}
+			{% assign hastags = false %}
+
+			{% for tag in item.tags %} {% assign hastags = true %} {% endfor %}
+			{% if hastags == true %}
+				<section class="archive-post {% for tag in item.tags %} {{ tag | remove: " " | replace: "+", "plus" | downcase }} {% endfor %}">
+					<i class="far fa-calendar-alt"></i>
+                  	<time datetime="{{ item.date }}"> 
+                      {{ item.date | date_to_string }}
+                  	</time> 
+                  	&raquo; &nbsp;
+
+					{% if item.link %}
+					<a href="{{ item.link }}" target="_blank">
+					{% else %}
+					<a href="{{ site.baseurl }}{{ item.url }}" title="{{ item.title }}">
+					{% endif %}
+					{% if item.title %}{{ item.title }}{% else %}&nbsp;{% endif %}
+					</a>
+				</section>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
