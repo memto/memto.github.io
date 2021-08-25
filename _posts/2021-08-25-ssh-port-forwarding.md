@@ -4,6 +4,14 @@ ads: true
 comments: true
 published: false
 title: SSH port forwarding
+categories:
+  - linux
+  - program
+  - tooltips
+tags:
+  - 'ssh '
+  - ssh-tunnel
+  - port-forwarding
 ---
 ### Ref
 
