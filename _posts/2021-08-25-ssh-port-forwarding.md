@@ -2,7 +2,7 @@
 layout: post
 ads: true
 comments: true
-published: false
+published: true
 title: SSH port forwarding
 categories:
   - linux
