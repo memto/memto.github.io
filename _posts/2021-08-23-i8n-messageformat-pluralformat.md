@@ -15,7 +15,7 @@ tags:
 ---
 ### Ref:
 
-	- https://github.com/messageformat/messageformat/issues/170
+- https://github.com/messageformat/messageformat/issues/170
 
 ### Error
 
