@@ -4,6 +4,12 @@ ads: true
 comments: true
 published: false
 title: Move docker data directory Ubuntu
+categories:
+  - linux
+  - program
+tags:
+  - docker
+  - docker-root
 ---
 
 ### Move docker data directory Ubuntu
