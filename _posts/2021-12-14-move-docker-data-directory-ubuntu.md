@@ -2,7 +2,7 @@
 layout: post
 ads: true
 comments: true
-published: false
+published: true
 title: Move docker data directory Ubuntu
 categories:
   - linux
