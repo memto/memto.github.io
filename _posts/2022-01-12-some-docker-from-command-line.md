@@ -5,7 +5,7 @@ comments: true
 published: false
 title: Some docker from command line
 ---
-## Postgresql
+#### Postgresql
 
 ```bash
 sudo docker run -d --restart always \
@@ -15,4 +15,14 @@ sudo docker run -d --restart always \
    -e PGDATA=/var/lib/postgresql/data/pgdata \
    -v <YOUR_PATH>/data/postgresql:/var/lib/postgresql/data \
     postgres:12
+```
+
+#### pgadmin
+
+```bash
+sudo docker run -d --restart always --network="host" \
+    --name pgadmin-container \
+    -e 'PGADMIN_DEFAULT_EMAIL=pagadmin@vbox.net' \
+    -e 'PGADMIN_DEFAULT_PASSWORD=123456aA@' \
+    dpage/pgadmin4
 ```
