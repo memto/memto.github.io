@@ -4,6 +4,12 @@ ads: true
 comments: true
 published: true
 title: Some docker from command line
+categories:
+  - linux
+  - program
+  - tooltips
+tags:
+  - docker
 ---
 #### Postgresql
 
