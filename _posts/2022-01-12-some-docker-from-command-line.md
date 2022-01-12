@@ -19,6 +19,8 @@ sudo docker run -d --restart always \
 
 #### pgadmin
 
+- **Note**: need `--network="host"` to use `localhost` when connecting to local postgres container as above (Other solutions: can create a docker network and specify the network for both; or create both in a docker-compose)
+
 ```bash
 sudo docker run -d --restart always --network="host" \
     --name pgadmin-container \
