@@ -9,7 +9,7 @@ title: Some docker from command line
 
 ```bash
 sudo docker run -d --restart always \
-   --name pgdev-container \
+   --name postgres-container \
    -p 9432:5432 \
    -e POSTGRES_PASSWORD=<YOUR_PASS> \
    -e PGDATA=/var/lib/postgresql/data/pgdata \
