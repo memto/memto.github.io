@@ -22,7 +22,7 @@ sudo docker run -d --restart always \
 ```bash
 sudo docker run -d --restart always --network="host" \
     --name pgadmin-container \
-    -e 'PGADMIN_DEFAULT_EMAIL=pagadmin@docker.net' \
+    -e 'PGADMIN_DEFAULT_EMAIL=pagadmin@pgadmin-container.com' \
     -e 'PGADMIN_DEFAULT_PASSWORD=<YOUR_PASS>' \
     dpage/pgadmin4
 ```
