@@ -39,8 +39,7 @@ sudo docker run -d --restart always \
 #### Cloundbeaver
 
 ```bash
-sudo docker run -d \
-	--restart unless-stopped \
+sudo docker run -d --restart unless-stopped \
 	--name cloudbeaver \
 	--network="host" \
 	# -p 8978:8978 \
