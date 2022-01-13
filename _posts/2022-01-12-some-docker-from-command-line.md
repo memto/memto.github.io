@@ -23,26 +23,28 @@ sudo docker run -d --restart always \
     postgres:12
 ```
 
-#### pgadmin
+#### pgadmin (PORT default: 8080)
 
 - **Note**: need `--network="host"` to use `localhost` when connecting to local postgres container as above (Other solutions: can create a docker network and specify the network for both; or create both in a docker-compose)
 
 ```bash
 sudo docker run -d --restart always \
-	--network="host" \
+    --network="host" \
     --name pgadmin-container \
     -e 'PGADMIN_DEFAULT_EMAIL=pagadmin@pgadmin-container.com' \
     -e 'PGADMIN_DEFAULT_PASSWORD=<YOUR_PASS>' \
     dpage/pgadmin4
 ```
 
-#### Cloundbeaver
+#### Cloundbeaver (PORT default: 8978)
 
 ```bash
+# use this if not network="host"
+# -p 8978:8978 \
+
 sudo docker run -d --restart unless-stopped \
 	--name cloudbeaver \
-	--network="host" \
-	# -p 8978:8978 \
+	--network="host" \	
 	-v <YOUR_PATH>/cloudbeaver:/opt/cloudbeaver/workspace \
  	\
 	dbeaver/cloudbeaver:latest
