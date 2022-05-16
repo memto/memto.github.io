@@ -23,7 +23,7 @@ sudo docker run -d --restart always \
     postgres:12
 ```
 
-#### pgadmin (PORT default: 8080)
+#### pgadmin (PORT default: 80/443)
 
 - **Note**: need `--network="host"` to use `localhost` when connecting to local postgres container as above (Other solutions: can create a docker network and specify the network for both; or create both in a docker-compose)
 
