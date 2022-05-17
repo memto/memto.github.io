@@ -11,6 +11,14 @@ categories:
 tags:
   - docker
 ---
+#### Redis
+```bash
+sudo docker run -d --restart always \
+   --name redis-container \
+   -p 6379:6379 \
+   redis:7.0.0
+```
+
 #### Postgresql
 
 ```bash
