@@ -14,7 +14,7 @@ tags:
 #### Redis
 ```bash
 sudo docker run -d --restart always \
-   --name redis-container \
+   --name redis7-container \
    -p 6379:6379 \
    redis:7.0.0
 ```
@@ -38,7 +38,7 @@ sudo docker run -d --restart always \
 ```bash
 sudo docker run -d --restart always \
     --network="host" \
-    --name pgadmin-container \
+    --name pgadmin4-container \
     -e 'PGADMIN_LISTEN_PORT=<YOUR_PORT>' \
     -e 'PGADMIN_DEFAULT_EMAIL=pagadmin@pgadmin.com' \
     -e 'PGADMIN_DEFAULT_PASSWORD=<YOUR_PASS>' \
