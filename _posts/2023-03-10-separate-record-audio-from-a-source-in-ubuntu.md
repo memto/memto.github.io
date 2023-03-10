@@ -2,7 +2,7 @@
 layout: post
 ads: true
 comments: true
-published: false
+published: true
 title: Separate record audio from a source in Ubuntu
 ---
 #### Create a virtual source
