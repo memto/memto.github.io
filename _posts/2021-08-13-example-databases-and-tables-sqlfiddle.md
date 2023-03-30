@@ -16,10 +16,14 @@ tags:
 ### Ref
 - https://stackoverflow.com/questions/34901258/are-there-sample-tables-on-sqlfiddle
 
+### Convert SQL syntax
+- http://www.sqlines.com/online
+
 ### Example Databases and Tables
 
 - Auto Shop Database:
-	- http://sqlfiddle.com/#!9/ff1d04 
+	- http://sqlfiddle.com/#!9/ff1d04 (MySQL)
+    - http://sqlfiddle.com/#!17/cd354 (PostgreSQL)
     - https://stackoverflow.com/a/46380990
 
 ```sql
@@ -30,7 +34,8 @@ tags:
 ```
 
 - Library Database:
-	- http://sqlfiddle.com/#!9/ba7ded
+	- http://sqlfiddle.com/#!9/ba7ded (MySQL)
+    - http://sqlfiddle.com/#!17/bcb8db (PostgreSQL)
     - https://stackoverflow.com/a/46381062
 
 ```sql
@@ -40,5 +45,6 @@ tags:
 ```
 
 - Countries Table:
-	- http://sqlfiddle.com/#!9/c7b3c2
+	- http://sqlfiddle.com/#!9/c7b3c2 (MySQL)
+    - http://sqlfiddle.com/#!17/9d226 (PostgreSQL)
     - https://stackoverflow.com/a/46381130
