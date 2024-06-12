@@ -7,6 +7,9 @@ title: Separate record audio from a source in Ubuntu
 categories:
   - linux
   - tooltips
+tags:
+  - pavucontrol
+  - gnome-sound-recorder
 ---
 #### Create a virtual source
 
