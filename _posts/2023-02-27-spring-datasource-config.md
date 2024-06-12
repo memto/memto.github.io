@@ -4,6 +4,10 @@ ads: true
 comments: true
 published: true
 title: Spring datasource config
+tags:
+  - Spring
+categories:
+  - program
 ---
 ```bash
 # H2 DB
