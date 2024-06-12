@@ -4,6 +4,9 @@ ads: true
 comments: true
 published: true
 title: Separate record audio from a source in Ubuntu
+categories:
+  - linux
+  - tooltips
 ---
 #### Create a virtual source
 
