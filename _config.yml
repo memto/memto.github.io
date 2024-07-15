@@ -90,8 +90,8 @@ sass:
 
 # About/contact
 author:
-  name:              dvn0zzz
-  email:             dvn0zzz@gmail.com
+  name:              ianwork9x
+  email:             ianwork9x@gmail.com
 
 # Custom vars
 version:             2.0.0
@@ -120,6 +120,7 @@ db:
 
 pages_list:
   About: '/about'
+  Working: '/working-chrono'
   Newterm: '/newterm'
   Archive: '/archive'
   Feed: '/atom.xml'
