@@ -3,13 +3,13 @@
 #   branch: main  # Ensure you're using your default branch, usually 'main' or 'master'
 backend:
   name: github
-  repo: memto/memto.github.io
+  repo: memto/markdocs
   branch: main
   base_url: https://sveltia-cms-auth.dntech9x.workers.dev/
   
 site_url: https://memto.github.io/
-media_folder: "media"  # Media files (images) will be stored here
-public_folder: "/media"  # URL for media files
+media_folder: "assets/images"  # Media files (images) will be stored here
+public_folder: "/markdocs/assets/images"  # URL for media files
 
 collections:
   # Blog posts
